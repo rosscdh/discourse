@@ -66,7 +66,7 @@ gem 'sinatra', require: nil
 gem 'slim'  # required for sidekiq-web
 gem 'strong_parameters' # remove when we upgrade to Rails 4
 gem 'therubyracer', require: 'v8'
-gem 'thin'
+gem 'puma'
 gem 'diffy', require: false
 gem 'highline', require: false
 
@@ -116,6 +116,7 @@ group :test, :development do
 end
 
 group :development do
+  gem 'foreman'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'librarian', '>= 0.0.25', require: false
